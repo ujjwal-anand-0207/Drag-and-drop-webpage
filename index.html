@@ -5,15 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Drag and Drop</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"/>
+  <script type="text/javascript" src="scripts.js"></script>
+  
 </head>
 
 <body>
   <div class="container">
     <div class="source-container">
-      <div class="item" draggable="true">Item 1</div>
-      <div class="item" draggable="true">Item 2</div>
-      <div class="item" draggable="true">Item 3</div>
+      <img src="xyz.jpg" class="item" width="85px" height="80px" id="item1" draggable="true" ondragstart="drag(event)" />
+      <img src="xyz.jpg" class="item" width="85px" height="80px" id="item2" draggable="true" ondragstart="drag(event)" />
+      <img src="xyz.jpg" class="item" width="85px" height="80px" id="item3" draggable="true" ondragstart="drag(event)" />
     </div>
 
     <div class="destination-container" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -23,7 +25,6 @@
 
   <button onclick="resetContainers()">Reset</button>
 
-  <script src="script.js"></script>
 </body>
 
 </html>
